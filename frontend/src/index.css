@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0f172a;
+  --primary-dark: #020617;
+  --primary-light: #1e293b;
+  --secondary-color: #3b82f6;
+  --secondary-dark: #1d4ed8;
+  --secondary-light: #60a5fa;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  @apply bg-[#f8fafc] text-slate-800 antialiased min-h-screen;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Common premium elements */
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-slate-200/50 shadow-sm rounded-lg;
+}
+
+.gradient-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(240, 244, 255, 0.5) 0%, rgba(248, 250, 252, 0.5) 90%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400;
+}
