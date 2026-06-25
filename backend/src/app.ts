@@ -32,7 +32,7 @@ app.use(helmet({
 
 const allowedOrigins = [
   "http://localhost:5173", // Local dev frontend
-  "https://hms-saas-frontend.vercel.app" // Production placeholder
+  process.env.CLIENT_URL || "" // Production placeholder
 ];
 
 app.use(cors({
